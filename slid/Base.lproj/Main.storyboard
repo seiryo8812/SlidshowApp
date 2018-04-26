@@ -14,14 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Qxu-2k-ypB">
-                    <connections>
-                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="Lc9-qG-3QM"/>
-                        <segue destination="yLv-L1-uPh" kind="show" identifier="result" id="6XN-kz-UvP"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlidshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -40,14 +33,14 @@
                                     <action selector="onPre:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qp-w3-3ju"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="244" verticalHuggingPriority="251" horizontalCompressionResistancePriority="735" translatesAutoresizingMaskIntoConstraints="NO" id="Tol-TG-tM5">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="244" verticalHuggingPriority="251" horizontalCompressionResistancePriority="735" image="_20A07352" translatesAutoresizingMaskIntoConstraints="NO" id="Tol-TG-tM5">
                                 <rect key="frame" x="60" y="170" width="255" height="143.5"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tol-TG-tM5" secondAttribute="height" multiplier="16:9" id="64J-2S-2Ds"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Qxu-2k-ypB" appends="YES" id="t07-es-MnS"/>
+                                    <outletCollection property="gestureRecognizers" destination="gat-Yv-lYo" appends="YES" id="gmj-md-Uxb"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSs-XM-l2k">
@@ -79,18 +72,25 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="nextp" destination="MSs-XM-l2k" id="Jfk-Am-72R"/>
-                        <outlet property="photo" destination="Tol-TG-tM5" id="xQQ-tc-Ckx"/>
+                        <outlet property="photo" destination="Tol-TG-tM5" id="OhJ-1k-7MY"/>
                         <outlet property="playingButton" destination="EOr-UO-1zJ" id="uLl-g3-Ggq"/>
                         <outlet property="prev" destination="Y6g-ff-gux" id="yoQ-FZ-hcr"/>
+                        <segue destination="yLv-L1-uPh" kind="show" identifier="result" id="xCs-8x-6oQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gat-Yv-lYo">
+                    <connections>
+                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="cGQ-eh-UQm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="0.5" y="37.5"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="F7N-Br-K7q">
             <objects>
-                <viewController id="yLv-L1-uPh" customClass="ResultViewController" customModule="slid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yLv-L1-uPh" customClass="ResultViewController" customModule="SlidshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGz-4K-aQd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,4 +129,7 @@
             <point key="canvasLocation" x="760.79999999999995" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="_20A07352" width="6720" height="4480"/>
+    </resources>
 </document>

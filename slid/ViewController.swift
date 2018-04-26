@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         displayImage()
         
     }
+
     @IBOutlet weak var photo: UIImageView!
     var timer: Timer?
     
@@ -75,6 +76,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func onTapImage(_ sender: Any) {
+    
+        self.timer?.invalidate()
+        self.timer = nil
+        
+        playingButton.setTitle("再生", for: .normal)
+        nextp.isEnabled = true
+        prev.isEnabled = true
         
         let name = imageNameArray[dispImageNo]
         
@@ -101,7 +109,7 @@ class ViewController: UIViewController {
             nextp.isEnabled = false
             prev.isEnabled = false
             
-        }else {
+        } else {
             self.timer?.invalidate()
             self.timer = nil
             
